@@ -2,6 +2,7 @@ PSSD Unlock
 ===========
 
 Unlock Samsung Portable SSD T1, T3 or T5 for Linux.
+T7 is not working.
 
 ## Dependencies
 
