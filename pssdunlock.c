@@ -25,6 +25,15 @@
 #define PID_T5_NORMAL 0x61f5
 #define PID_T5_LOCKED 0x61f6
 
+#define PID_T5_NORMAL 0x61f5
+#define PID_T5_LOCKED 0x61f6
+
+/*
+ * These are appear to be correct for the T7 but after relink the device is not accessible
+ * #define PID_T7_NORMAL 0x4001
+ * #define PID_T7_LOCKED 0x4002
+ */
+
 uint8_t payload_unlock[31] = {
     0x55, 0x53, 0x42, 0x43,
     0x0a, 0x00, 0x00, 0x00,
@@ -73,6 +82,9 @@ int main(int argc, char **argv)
     } else if (!strcmp(argv[1], "t5")) {
         pid_normal = PID_T5_NORMAL;
         pid_locked = PID_T5_LOCKED;
+//   } else if (!strcmp(argv[1], "t7")) {
+//        pid_normal = PID_T7_NORMAL;
+//        pid_locked = PID_T7_LOCKED;
     } else {
         fprintf(stderr, "Unknown device: %s\n", argv[1]);
         exit(1);
